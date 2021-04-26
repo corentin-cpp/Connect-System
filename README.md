@@ -1,7 +1,7 @@
 # Connect-System
 
 Pour commancer vous devez créer une classe qui va contenir toute les information comme si-dessous : 
-```
+```cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Json
 {
-    class Class
+    class VotreClasse
     {
         public string mail { get; set; }
         public string id { get; set; }
@@ -20,4 +20,28 @@ namespace Json
 
     }
 }
+```
+------------------------------------Création Du Compte------------------------------------
+
+Après avoir créer la classe, on va attribuer pour chaque variable de `VotreClasse` des données dans la classe `Program`, tous ca rangé dans une méthode (avec en argumment les varible de `VotreClasse` :
+```cs
+            VotreClasse votreClasse = new VotreClasse
+            {
+                mail = "mailPersonne@exxemple.com",
+                id = "peronne35",
+                pass = "motDePasse",
+                autoReconnect = false,
+                date = DateTime.Now
+            };
+```
+
+Ensuite on va créer le fichier `.json` qui va contenir l'object `VotreClasse`. Pour cela n'oublier pas d'utiliser le `using System.IO;` ainsi que `using Newtonsoft.Json;`.
+```cs
+            string json = JsonConvert.SerializeObject(votreClasse);
+
+            using (StreamWriter sw = new StreamWriter("fileName.json"))
+            {
+                sw.WriteLine(json);
+                sw.Close();
+            }
 ```
