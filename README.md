@@ -45,3 +45,10 @@ Ensuite on va créer le fichier `.json` qui va contenir l'object `VotreClasse`. 
                 sw.Close();
             }
 ```
+Pour finir la méthode de Création du compte on va vérifier que notre fichier a bien été créer.
+```cs
+            if (File.Exists("fileName.json"))
+                return true;
+            else
+                return false;
+```
