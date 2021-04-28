@@ -1,6 +1,6 @@
 # Connect-System
 
-Je vous montre comment faire un system de connexion simple et facile à utiliser, il ne vous mansue plus qu'a l'adapter a vos project. 
+Je vous montre comment faire un system de connexion simple et facile à utiliser, il ne vous manque plus qu'a l'adapter a vos project. 
 
 ------------------------------------Création Du Compte------------------------------------
 
